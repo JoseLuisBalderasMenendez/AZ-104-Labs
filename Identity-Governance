@@ -1,0 +1,345 @@
+# AZ-104 Lab: Manage Identities and Governance in Azure
+
+## Overview
+
+This lab focuses on identity management, access control, and governance within Microsoft Azure. The objective is to gain hands-on experience with Microsoft Entra ID, Azure RBAC, Azure Policy, Resource Locks, Management Groups, and Self-Service Password Reset (SSPR).
+
+---
+
+## Learning Objectives
+
+- Create and manage Microsoft Entra ID users
+- Create and manage security groups
+- Implement Azure Role-Based Access Control (RBAC)
+- Configure Azure Policy
+- Apply Resource Locks
+- Configure Self-Service Password Reset (SSPR)
+- Understand Management Group hierarchy
+- Create custom RBAC roles
+
+---
+
+## Lab Architecture
+
+```text
+Management Group
+        │
+        ▼
+   Subscription
+        │
+        ▼
+ Resource Group
+(RG-AZ104-IDENTITY)
+        │
+ ┌──────┴──────┐
+ │             │
+Users       Policies
+ │             │
+ └──────┬──────┘
+        ▼
+       RBAC
+```
+
+---
+
+## Services Used
+
+- Microsoft Entra ID
+- Azure RBAC
+- Azure Policy
+- Resource Groups
+- Resource Locks
+- Self-Service Password Reset
+- Management Groups
+- Custom Roles
+
+---
+
+## Lab Tasks
+
+### Task 1 - Create Users
+
+Created:
+
+```text
+az104-user1
+az104-user2
+```
+
+Skills practiced:
+
+- User creation
+- Password management
+- User administration
+
+---
+
+### Task 2 - Create Security Groups
+
+Created:
+
+```text
+AZ104-Admins
+```
+
+Added users to the group.
+
+Skills practiced:
+
+- Group membership
+- Group-based administration
+
+---
+
+### Task 3 - Deploy Resource Group
+
+Created:
+
+```text
+RG-AZ104-IDENTITY
+```
+
+Region:
+
+```text
+East US
+```
+
+Skills practiced:
+
+- Resource organization
+- Scope management
+
+---
+
+### Task 4 - Configure Azure RBAC
+
+Assigned:
+
+```text
+Contributor
+```
+
+To:
+
+```text
+AZ104-Admins
+```
+
+Scope:
+
+```text
+RG-AZ104-IDENTITY
+```
+
+Skills practiced:
+
+- Role assignments
+- Principle of least privilege
+
+---
+
+### Task 5 - Explore Built-in Roles
+
+Reviewed:
+
+- Owner
+- Contributor
+- Reader
+- User Access Administrator
+
+Key Takeaways:
+
+```text
+Owner = Full control + IAM
+
+Contributor = Full control except IAM
+
+Reader = Read-only
+
+User Access Administrator = Access management
+```
+
+---
+
+### Task 6 - Configure Azure Policy
+
+Assigned:
+
+```text
+Allowed Locations
+```
+
+Allowed region:
+
+```text
+East US
+```
+
+Skills practiced:
+
+- Policy assignments
+- Governance controls
+
+---
+
+### Task 7 - Configure Resource Locks
+
+Configured:
+
+```text
+CanNotDelete
+```
+
+Skills practiced:
+
+- Resource protection
+- Governance implementation
+
+---
+
+### Task 8 - Configure Self-Service Password Reset
+
+Enabled SSPR for selected users.
+
+Authentication methods:
+
+- Email
+- Microsoft Authenticator
+
+Skills practiced:
+
+- Identity protection
+- Password recovery
+
+---
+
+### Task 9 - Configure Management Groups
+
+Created:
+
+```text
+AZ104-CORP
+```
+
+Skills practiced:
+
+- Governance hierarchy
+- Inheritance
+
+---
+
+### Task 10 - Create a Custom Role
+
+Created:
+
+```text
+VM Operator
+```
+
+Permissions:
+
+- Read
+- Start VM
+- Restart VM
+
+Skills practiced:
+
+- Custom RBAC roles
+- Least privilege access
+
+---
+
+## Key Exam Concepts
+
+### Azure RBAC
+
+```text
+Who can do what on which resource?
+```
+
+---
+
+### Azure Policy
+
+```text
+What is allowed?
+```
+
+---
+
+### Resource Locks
+
+```text
+Prevent accidental changes.
+```
+
+---
+
+### Management Groups
+
+```text
+Management Group
+↓
+Subscription
+↓
+Resource Group
+↓
+Resource
+```
+
+---
+
+### Self-Service Password Reset
+
+```text
+Reduce Help Desk workload
+```
+
+---
+
+## AZ-104 Skills Covered
+
+✅ Microsoft Entra ID
+
+✅ Azure RBAC
+
+✅ Azure Policy
+
+✅ Resource Locks
+
+✅ Resource Groups
+
+✅ Management Groups
+
+✅ Identity Governance
+
+✅ SSPR
+
+✅ Custom Roles
+
+---
+
+## Exam Takeaways
+
+```text
+RBAC = WHO
+
+Policy = WHAT
+
+Management Groups = Governance
+
+SSPR = Password Recovery
+
+Resource Locks = Protection
+```
+
+---
+
+## Status
+
+✅ Completed
+
+Learning Path:
+
+AZ-104: Manage Identities and Governance in Azure
